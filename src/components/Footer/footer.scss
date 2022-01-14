@@ -1,0 +1,58 @@
+@import "../../sass/reset";
+@import "../../sass/variables";
+
+.footer {
+  width: 100%;
+  background-color: $offWhite;
+  border-top: 1px solid rgba(175, 175, 175, 0.493);
+  .inner-footer {
+    .container {
+      .row {
+        .col {
+          .item {
+            cursor: pointer;
+            margin-top: 5px;
+            color: #707083;
+            &:hover {
+              color: $darkBlue;
+              text-decoration: underline;
+            }
+          }
+          .active {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: $darkBlue;
+          }
+        }
+      }
+    }
+    .below-items {
+      border-top: 1px solid rgba(175, 175, 175, 0.493);
+      padding-top: 30px;
+      div {
+        font-size: 18px;
+        color: $darkBlue;
+        span {
+          margin-right: 10px;
+          i {
+            font-size: 20px;
+            color: $darkBlue;
+          }
+        }
+        .active-github-link {
+          cursor: pointer;
+          text-decoration: none;
+          color: $darkBlue;
+          &:hover {
+            color: $iconic;
+            text-decoration: underline;
+          }
+        }
+      }
+      .change-theme {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../sass/reset";
+@import "../../sass/variables";
+
+.tryhosting-section-container {
+  width: 100%;
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .tryhosting-section {
+    height: 55vh;
+    .inner-background {
+      width: 100%;
+      height: 100%;
+      padding: 40px;
+      background: url("https://airbnb-ish.vercel.app/images/host.jpg") no-repeat
+        center center/cover;
+      border-radius: 20px;
+      h1 {
+        color: $primary;
+        font-weight: 800;
+      }
+      p {
+        width: 40%;
+        margin-top: 20px;
+        font-size: 20px;
+        color: $primary;
+      }
+      .tryhosting-button {
+        margin-top: 50px;
+        a {
+          text-decoration: none;
+          color: $darkTheme;
+          font-size: 22px;
+          font-weight: 600;
+          background-color: $primary;
+          padding: 20px;
+          border-radius: 10px;
+          border: 2px solid transparent;
+          outline: transparent solid 2px;
+          &:hover {
+            outline: $primary solid 2px;
+            border: 2px solid $secondary;
+          }
+        }
+      }
+    }
+  }
+}

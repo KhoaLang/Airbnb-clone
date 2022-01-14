@@ -1,0 +1,11 @@
+@import "./sass/reset";
+@import "./sass/variables";
+
+.App {
+  width: 100%;
+}
+
+.no-scrolling {
+  height: 100vh;
+  overflow: hidden;
+}

@@ -1,0 +1,43 @@
+@import "../../sass/reset";
+@import "../../sass/variables";
+
+.discoverthings-section-container {
+  width: 100%;
+  background-color: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .discoverthings-section {
+    h2 {
+      font-weight: 800;
+    }
+    .container {
+      margin-top: 20px;
+      .row {
+        .col {
+          cursor: pointer;
+          img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px -1px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s ease-out;
+          }
+          h4 {
+            font-size: 22px;
+            font-weight: 800;
+            margin-top: 5px;
+          }
+          p {
+            font-size: 19px;
+          }
+
+          &:hover {
+            img {
+              transform: scale(0.9);
+            }
+          }
+        }
+      }
+    }
+  }
+}

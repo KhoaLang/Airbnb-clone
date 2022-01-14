@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.scss";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import "boxicons";
+import Banner from "./components/Banner/Banner";
+import ExploreNearby from "./components/ExploreNearby/ExploreNearby";
+import LiveAnywhere from "./components/LiveAnywhere/LiveAnywhere";
+import DiscoverThingsToDo from "./components/DiscoverThings/DiscoverThingsToDo";
+import TryHosting from "./components/TryHosting/TryHosting";
+import React, { useContext, useState } from "react";
+import ThemeContextProvider from "./context/ThemeContext";
 
 function App() {
+  const [advanceSearch, setAdvanceSearch] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContextProvider>
+      <div className={advanceSearch ? "App no-scrolling" : "App"}>
+        <Header
+          advanceSearch={advanceSearch}
+          setAdvanceSearch={setAdvanceSearch}
+        />
+        <Banner />
+        <ExploreNearby />
+        <LiveAnywhere />
+        <DiscoverThingsToDo />
+        <TryHosting />
+        <Footer />
+      </div>
+    </ThemeContextProvider>
   );
 }
 
