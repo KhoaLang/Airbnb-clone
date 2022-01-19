@@ -103,7 +103,7 @@ const Search = (props) => {
         break;
     }
     setCurrentDate({
-      date: today.getDay().toString(),
+      date: today.getDate().toString(),
       month: month,
       year: today.getFullYear().toString(),
     });
@@ -211,7 +211,7 @@ const Search = (props) => {
               Close
             </button>
           </div>
-          <div className="pick-content d-flex justify-content-between">
+          <div className="pick-content">
             <ul
               className="left-pick-content"
               style={isDarkTheme ? darkThemeStyle : {}}
@@ -282,7 +282,7 @@ const Search = (props) => {
             </div>
             <div className="children d-flex justify-content-between align-items-center">
               <p>Children</p>
-              <div className="button d-flex align-items-center">
+              <div className="button d-flex justify-content-between align-items-center">
                 <button
                   className={childrenCount > 0 ? "active-guest-button" : ""}
                   onClick={() =>

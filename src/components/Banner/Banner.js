@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./banner.scss";
 const Banner = () => {
   return (
-    <section className="banner d-flex align-items-center">
+    <section className="banner">
       <div className="banner-container container-md d-flex align-items-end">
         <div className="banner-quote">
           <h1>Olympian & Paralympian Online Experiences</h1>

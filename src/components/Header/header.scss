@@ -364,6 +364,8 @@
           .pick-content {
             width: 100%;
             margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
             .left-pick-content {
               width: 30%;
               border-radius: 10px;
@@ -491,6 +493,7 @@
   }
 }
 
+// ***************** Animation *****************
 @keyframes movingDown {
   0% {
     height: 0;
@@ -505,5 +508,489 @@
   }
   100% {
     opacity: 1;
+  }
+}
+// **********************************
+
+// Responsive
+// Web first
+@media screen and (max-width: 1199.98px) {
+  .header {
+    .header-container {
+      .nav-bar {
+        .left-items {
+          li {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+    .search-section {
+      .search-bar {
+        button {
+          font-size: 18px;
+          i {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .scrolling-animation-search-section {
+      .search-bar {
+        button {
+          width: 40px;
+        }
+      }
+    }
+  }
+  .advance-search-header {
+    .search-component {
+      .advance-search-section {
+        .search-bar {
+          .advance-search-items {
+            span {
+              p {
+                &:nth-child(2) {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .last {
+            span {
+              p:nth-child(2) {
+                color: grey;
+                font-size: 14px;
+              }
+            }
+            button {
+              i {
+                font-size: 16px;
+              }
+              p {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
+        .scrolling-section {
+          .add-guest {
+            .content {
+              .adult {
+                width: 40%;
+              }
+              .children {
+                width: 40%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .header {
+    .search-section {
+      .search-bar {
+        button {
+          width: 20%;
+          font-size: 14px;
+        }
+      }
+    }
+    .header-container {
+      .nav-bar {
+        .left-items {
+          width: 40%;
+          li {
+            color: transparent;
+            cursor: default;
+            &::after {
+              background-color: transparent;
+            }
+            &:hover {
+              &::after {
+                width: 30%;
+              }
+            }
+            &:nth-child(1) {
+              &::after {
+                background-color: transparent;
+              }
+            }
+          }
+        }
+        .right-items {
+          width: 60%;
+          cursor: default;
+          li {
+            font-size: 18px;
+            cursor: default;
+            i {
+              font-size: 18px;
+            }
+          }
+        }
+        .scrolling-animation-right-items {
+          li {
+            // color: transparent;
+            display: none;
+          }
+          .user-icon-active {
+            display: none;
+          }
+          .user-icon-active-dark {
+            display: none;
+          }
+        }
+      }
+    }
+    .scrolling-animation-search-section {
+      top: -50%;
+      left: auto;
+      right: 0%;
+    }
+  }
+  .advance-search-header {
+    .search-component {
+      .advance-search-section {
+        .search-bar {
+          width: 80%;
+          .advance-search-items {
+            span {
+              input {
+                height: fit-content;
+                font-size: 14px;
+                &::placeholder {
+                  font-size: 14px;
+                }
+              }
+              p {
+                &:nth-child(2) {
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+          .last {
+            span {
+              p:nth-child(2) {
+                color: grey;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .scrolling-section {
+          width: 80%;
+          .pick {
+            .pick-title {
+              button {
+                font-size: 13px;
+              }
+            }
+          }
+          .add-guest {
+            .content {
+              .adult {
+                width: 50%;
+              }
+              .children {
+                width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .header {
+    .search-section {
+      .search-bar {
+        button {
+          width: 25%;
+          font-size: 14px;
+        }
+      }
+    }
+    .scrolling-animation-search-section {
+      left: auto;
+      right: -13%;
+    }
+  }
+  .advance-search-header {
+    .search-component {
+      .advance-search-section {
+        .search-bar {
+          .advance-search-items {
+            span {
+              input {
+                font-size: 12px;
+                &::placeholder {
+                  font-size: 12px;
+                }
+              }
+              p {
+                &:nth-child(1) {
+                  font-size: 13px;
+                }
+                &:nth-child(2) {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+          .last {
+            span {
+              p:nth-child(1) {
+                font-size: 13px;
+              }
+              p:nth-child(2) {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .scrolling-section {
+          margin-bottom: 10px;
+          .pick {
+            .pick-title {
+              h5 {
+                font-size: 20px;
+              }
+
+              button {
+                width: 15%;
+                font-size: 12px;
+              }
+            }
+          }
+          .add-guest {
+            .content {
+              .adult {
+                width: 40%;
+              }
+              .children {
+                width: 40%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .header {
+    .header-container {
+      display: none !important;
+    }
+    .search-section {
+      margin-top: 0px;
+      .search-bar {
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        input {
+          font-size: 14px;
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+        button {
+          width: 30px;
+          height: 30px;
+          font-size: 13px;
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+    .scrolling-animation-search-section {
+      top: 0%;
+      .search-bar {
+        height: 40px;
+      }
+    }
+  }
+  .advance-search-header {
+    .search-component {
+      .advance-search-section {
+        margin-top: 0px;
+        .search-bar {
+          width: 97%;
+          .advance-search-items {
+            span {
+              p {
+                display: none !important;
+              }
+            }
+
+            &:hover {
+              background-color: $primary;
+              input {
+                background-color: $primary;
+              }
+            }
+            &:nth-child(1) {
+              width: 60%;
+              span {
+                width: 100%;
+                input {
+                  width: 100%;
+                }
+              }
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+              display: none !important;
+            }
+          }
+          .last {
+            width: fit-content;
+            padding-left: 10px;
+            span {
+              display: none !important;
+            }
+            button {
+              width: fit-content;
+              height: fit-content;
+              border-radius: 50%;
+              padding: 15px;
+              i {
+                font-size: 15px;
+              }
+              p {
+                display: none;
+              }
+            }
+            &:hover {
+              background-color: $primary;
+            }
+          }
+        }
+        .scrolling-section {
+          width: 97%;
+          .pick {
+            .pick-content {
+              justify-content: center;
+              .left-pick-content {
+                display: none;
+              }
+              .right-pick-content {
+                width: 70%;
+              }
+            }
+          }
+          .add-guest {
+            .content {
+              flex-direction: column;
+              .adult {
+                width: 100%;
+                .button {
+                  width: 40%;
+                }
+              }
+              .children {
+                width: 100%;
+                margin-left: auto;
+                .button {
+                  width: 40%;
+                  input {
+                    width: 30%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//For extra small phone
+@media screen and (max-width: 483px) {
+  .advance-search-header {
+    .search-component {
+      .advance-search-section {
+        .search-bar {
+          width: 97%;
+          .advance-search-items {
+            span {
+              p {
+                &:nth-child(1) {
+                  font-size: 9px;
+                }
+                &:nth-child(2) {
+                  font-size: 7px;
+                }
+              }
+              input {
+                font-size: 9px;
+                &::placeholder {
+                  font-size: 9px;
+                }
+              }
+            }
+          }
+          .last {
+            span {
+              p:nth-child(1) {
+                font-size: 10px;
+              }
+              p:nth-child(2) {
+                font-size: 8px;
+              }
+            }
+            button {
+              i {
+                font-size: 12px;
+              }
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .scrolling-section {
+          width: 97%;
+          .pick {
+            .pick-title {
+              h5 {
+                font-size: 15px;
+              }
+            }
+            .pick-content {
+              .left-pick-content {
+                width: 20%;
+              }
+              .right-pick-content {
+                width: 80%;
+              }
+            }
+          }
+          // .add-guest {
+          //   .content {
+          //     .adult {
+          //       width: 45%;
+          //     }
+          //     .children {
+          //       width: 45%;
+          //     }
+          //   }
+          // }
+        }
+      }
+    }
   }
 }

@@ -6,6 +6,8 @@
   width: 100%;
   background: url("https://airbnb-ish.vercel.app/images/hero.jpg") no-repeat
     center center/ cover;
+  display: flex;
+  align-items: center;
   .banner-container {
     height: 75%;
     .banner-quote {
@@ -19,17 +21,82 @@
         width: 45%;
         background-color: $primary;
         border-radius: 10px;
-        border: 2px solid rgb(0, 7, 70);
+        border: 2px solid transparent;
         color: $secondary;
-        transition: box-shadow 0.1s ease-out;
+        transition: all 0.1s ease-out;
         padding: 15px;
         font-size: 20px;
         margin-top: 10px;
-
         font-size: 23px;
-        font-weight: 400;
+        font-weight: 600;
         &:hover {
+          border: 2px solid rgb(0, 7, 70);
           box-shadow: 0px 0px 0px 2px $primary;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199.98px) {
+  .banner {
+    .banner-container {
+      margin-top: 40px;
+      .banner-quote {
+        button {
+          width: 50%;
+          font-size: 18px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991.98px) {
+  .banner {
+    background-image: linear-gradient(to right, #1e1e38c7, transparent),
+      url("https://airbnb-ish.vercel.app/images/hero.jpg");
+
+    .banner-container {
+      height: 60%;
+      .banner-quote {
+        width: 45%;
+        h1 {
+          font-size: 50px;
+        }
+        button {
+          width: 40%;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .banner {
+    .banner-container {
+      height: 50%;
+      .banner-quote {
+        h1 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .banner {
+    align-items: flex-start !important;
+    .banner-container {
+      margin-top: 100px;
+      height: fit-content;
+      .banner-quote {
+        width: 90%;
+        h1 {
+          font-size: 30px;
+        }
+        button {
+          width: fit-content;
         }
       }
     }
